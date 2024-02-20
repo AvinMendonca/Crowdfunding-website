@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CrowdCare</title>
     <link rel="stylesheet" href="responsivestyle.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudfare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <!-- favicon -->
     <!-- <link rel="shortcut icon" href=""> insert favicon here -->
     <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
@@ -13,14 +14,16 @@
 <body>
     <header>
         <nav>
-            <img src="" alt="logo">
+            <h1 style="font-size: 50px;">CrowdCare</h1>
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About Us</a></li>
                 <li><a href="#mission">Mission</a></li>
                 <li><a href="#gallery">Gallery</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <button>Donate Now</button>
+                <button id="donate"><form><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_Nbr4VVyCT2bGwK" async> </script> </form>
+                </button>
+
             </ul>
         </nav>
         <!-- Home Section -->
@@ -35,13 +38,13 @@
     <section class="about" id="about">
         <div class="about-left-side">
             <h1>About Us</h1>
-            <h3>We've worked on improving lives of over 25,000 sick people through donations.</h3>
-            <p>
+            <h3>Welcome to CrowdCare, a beacon of hope and compassion dedicated to improving the lives of those facing health challenges.</h3>
+            <p> With a proud history of impacting over 25,000 individuals, our mission goes beyond providing donations — it's about creating lasting transformations..
                 Young people from different backgrounds have a huge impact on us and all our activities. They highlight those parts of the society that are broken, so we can help them in all possible ways to regain hope and flourish in life.
             </p>
         </div>
         <div class="about-right-side">
-            <img src="images\about-01-free-img.jpg" alt="about-img">
+            <img src="images/about.jpg" alt="about-img">
         </div>
     </section>
 
@@ -52,7 +55,7 @@
         <p>
             <span>W</span>e plan and support fundings that help change the lives of disadvantaged children and people from across different regions of the world.
         </p>
-        <button>Read More</button>
+        <button class="btn">Read More</button>
 
         <div class="cards">
             <div class="box boxa">
@@ -65,51 +68,75 @@
             <div class="box boxb">
                 <h2>We Provide Care</h2>
                 <h5>
-                    We are in search of opportunities to help as many youth as possible. We apporach and fund all those who are in need.
+                    Our mission revolves around actively seeking out opportunities to extend a helping hand and make a positive impact.
                 </h5>
                 <hr>
             </div>
             <div class="box boxc">
                 <h2>We Educate</h2>
                 <h5>
-                    We are in search of opportunities to help as many youth as possible. We apporach and fund all those who are in need.
+                    We are dedicated to providing accessible and impactful learning opportunities for individuals of all ages and backgrounds.
                 </h5>
                 <hr>
             </div>
             <div class="box boxd">
                 <h2>We Employ</h2>
                 <h5>
-                    We are in search of opportunities to help as many youth as possible. We apporach and fund all those who are in need.
+                    Join us in our mission to foster economic empowerment and create a positive impact on lives.
                 </h5>
                 <hr>
             </div>
         </div>
-        <div class="images" id="gallery">
-            <img src="images\gallery-001-free-img.jpg" alt="img">
-            <img src="images\gallery-002-free-img.jpg" alt="img">
-            <img src="images\gallery-003-free-img.jpg" alt="img">
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="slider_container">
+        <div class="container">
+            <div class="swiper card_slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="img_box">
+                            <img src="images/gallery-001-free-img.jpg" alt="img">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="img_box">
+                            <img src="images/gallery-002-free-img.jpg" alt="img">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="img_box">
+                            <img src="images/gallery-003-free-img.jpg" alt="img">
+                        </div>
+                    </div>
+
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination">
+                </div>
+            </div>
         </div>
-    </div>
     </section>
 
     <!-- Action -->
     <section class="action">
         <h3>GIVE US A HAND</h3>
         <h1>Support us and change the course of <br>
-        child's life today!</h1>
-        <button>Donate</button>
+        someone's life today!</h1>
+        <a href="#donate"><button class="btn">Donate</button></a>
     </section>
 
     <!-- contact section -->
     <section class="contact" id="contact">
         <div class="contact-left-side">
         <h2>Stay up to date</h2>
-        <input type="email" placeholder="Email Adress">
-        <br>
-        <button>Submit</button>
+        <a href="mailto:crowdcare@gmail.com">
+            <button class="btn">E-Mail Us</button>
+        </a>
         <h1>GIVE US A HAND</h1>
         <p>
-            Copyright © 2023 CrowCare 
+            Copyright © 2024 CrowdCare 
         </p>
         </div>
         <div class="contact-right-side">
@@ -117,15 +144,16 @@
             <h4>123 Fifth Avenue, New York, NY 10160</h4>
             <p>987-654-3210</p>
             <div class="icons">
-                <i class="fa fa-instagram"></i>
-                <i class="fa fa-twitter"></i>
-                <i class="fa fa-facebook"></i>
-                <i class="fa fa-linkedin"></i>
+                <i class='bx bxl-instagram-alt'></i>
+                <i class='bx bxl-twitter' ></i>
+                <i class='bx bxl-facebook' ></i>
+                <i class='bx bxl-linkedin' ></i>
             </div>
         </div>
         
     </section>
-    <script src="index.js">
-    </script>
+    <script src="javascript/scroll.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="javascript/slider.js"></script>
 </body>
 </html>
